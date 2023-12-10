@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{%block content %}
+<h2> Listas Criadas </h2> 
+<ul> 
+    {% for Tarefa in Tarefas %}
+
+       <li> {{Tarefa.titulo}} - {{Tarefa.descricao}} </li> 
+    {% endfor %}
+</ul>
+
+{% endblock %}
