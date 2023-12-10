@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Lista de Tarefas</h1>
+
+  <!-- Menu de navegação -->
+  <nav>
+    <ul>
+      <li><a href="{% url 'Lista_Tarefas' %}">Listas Criadas</a></li>
+      <li><a href="{% url 'Criar_Tarefas' %}">Criar nova lista</a></li>
+    </ul>
+  </nav>
+
+  <ul>
+    <li><strong>sem nome</strong>{{ num_semnome }}</li>
+    <li><strong>sem nome</strong>{{ num_semnome }}</li>
+  </ul>
+{% endblock %}
