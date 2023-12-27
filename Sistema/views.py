@@ -10,27 +10,31 @@ from Sistema.models import Usuario, Tarefa, Categoria
 # Create your views here.
 def Lista_Tarefas(request):
     print('Lista de Tarefas')
-    template = loader.get_template("Sistema/base.html")  # Corrigi a chamada da função get_template
+    template = loader.get_template("base.html")  # Corrigi a chamada da função get_template
     return HttpResponse(template.render())
 
 def Listas_Criadas(request):
     Tarefas = Tarefa.objects.all()
     print('Listas Criadas')
-    return render (request, 'listas_criadas.html', {'Tarefas:Tarefas'})
+    return render(request, 'listas_criadas.html', {'Tarefas': Tarefas})
 
-def Criar_Tarefas(request):
-    if request.method =='Post':
-        form = Tarefa_Form(request.Post)
+
+def Criar_Tarefas(request): ## "Se funciona, deixe queto."
+    form2 = Tarefa.objects.all()
+    
+    if request.method == 'POST':
+        form = Tarefa_Form(request.POST)
+        
         if form.is_valid():
-            print(request.POST.get('Tarefa'))##Debuging aqui
             nova_tarefa = form.save(commit=False)
-            nova_tarefa.Usuario = request.POST.get('Usuario')
-            nova_tarefa.Tarefa = request.POST.get('Tarefa') 
+            nova_tarefa.Usuario = form.cleaned_data.get('Usuario')
+            nova_tarefa.Tarefa = form.cleaned_data.get('Tarefa')
             nova_tarefa.save()
-            return redirect('pagina_sucesso.html')
-        else:
-            form = Tarefa_Form()
-    return render(request,'Sistema/Criar_Tarefas',{'form':form})
+            return redirect('Sistema:pagina_sucesso')
+    else:
+        form = Tarefa_Form()
+
+    return render(request, 'pagina_sucesso.html', {'form2': form2, 'form': form})
     ##return HttpResponse('Criar Tarefas')
 
 ##def Criar_Tarefas(request):
