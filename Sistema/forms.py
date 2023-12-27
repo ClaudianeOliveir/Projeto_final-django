@@ -1,11 +1,12 @@
 from django import forms 
-from Sistema.models import Tarefa 
+from .models import Tarefa 
 
-class TarefaForm(forms.ModelForm):
-    class meta: 
+class Tarefa_Form(forms.ModelForm):
+    class Meta: 
         model = Tarefa 
-        filds = ['titulo', 'descricao'] 
+        fields = ['titulo', 'descricao']
+        exclude = ['data_finalizacao','concluida','proprietario'] 
 
-        widgets = {
-            'descricao': forms.Textarea(attrs={'rows':4, 'cols': 40}),
-        }
+        ##widgets = {
+        #    'descricao': forms.Textarea(attrs={'rows':4, 'cols': 40}),
+        #}
