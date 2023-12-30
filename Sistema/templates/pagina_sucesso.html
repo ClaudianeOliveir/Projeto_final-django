@@ -5,10 +5,11 @@
     </head>
     <body>
         <h1> Tarefa Criada com Sucesso </h2>
-            <p> Titulo: {{ nova_tarefa.titulo}}</p>
-            <p> Descricao: {{nova_tarefa.descricao}}</p> 
+            <p> Titulo: {{ titulo}}</p>
+            <p> Descricao: {{descricao}}</p> 
+            <p> Proprietário: {{proprietario}}</p>
 
-            <a href ="{% url'Criar_Tarefas}">Criar outra tarefa</a>
+            <a href ="/Criar_Tarefas">Criar outra tarefa</a>
         </body>
         
         <html>

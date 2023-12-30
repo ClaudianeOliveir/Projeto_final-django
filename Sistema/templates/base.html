@@ -7,13 +7,12 @@
   </head>
   <h1> Lista de Tarefas</h1>
   <body>
-    <! - -menu - - > 
+    <!-- menu ---> 
     <nav>
       <ul>
-        <li><a href="/Listas_Criadas"> Listas Criadas</a></li>
-        <li><a href="/Criar_Tarefas">Criar nova lista </a></li> 
+          <li><a href="{% url 'Sistema:Listas_Criadas' %}">Listas Criadas</a></li>
+          <li><a href="{% url 'Sistema:Criar_Tarefas' %}">Criar Nova Tarefa</a></li>
       </ul>
     </nav> 
-  
   </body>
 </html>
