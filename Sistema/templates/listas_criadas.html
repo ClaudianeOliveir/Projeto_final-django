@@ -10,3 +10,13 @@
     </ul>
 
 {% endblock %}
+
+{% if Tarefas %}
+    <ul> 
+        {% for Tarefa in Tarefas %}
+            <li> {{Tarefa.titulo}} - {{Tarefa.descricao}} </li> 
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhuma tarefa encontrada.</p>
+{% endif %}
