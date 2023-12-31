@@ -2,16 +2,21 @@
   <head> 
   <meta charset="UTF-8"> 
     <title> Lista de tarefas </title>
+    {%load static%}
+    <link rel="stylesheet" href="{%static"css/estilo.css"%}"/>
   </head>
   <h1> Lista de Tarefas</h1>
   <body>
-    <! - -menu - - > 
+    <!-- menu --> 
     <nav>
-      <ul>
-        <li><a href="/"> Listas Criadas</a></li>
-        <li><a href="/outra_pagina/">Criar nova lista </a></li> 
+      <ul id="menu-h">
+          <li>
+            <a href="{% url 'Sistema:Listas_Criadas' %}">Listas Criadas</a>
+          </li>
+          <li>
+            <a href="{% url 'Sistema:Criar_Tarefas' %}">Criar Nova Tarefa</a>
+          </li>
       </ul>
     </nav> 
-  
   </body>
 </html>

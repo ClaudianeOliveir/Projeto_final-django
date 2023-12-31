@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{%block content %}
+    <h2> Listas Criadas </h2> 
+    <ul> 
+        {% for Tarefa in Tarefas %}
+
+        <li> {{Tarefa.titulo}} - {{Tarefa.descricao}} </li> 
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
+{% if Tarefas %}
+    <ul> 
+        {% for Tarefa in Tarefas %}
+            <li> {{Tarefa.titulo}} - {{Tarefa.descricao}} </li> 
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhuma tarefa encontrada.</p>
+{% endif %}
