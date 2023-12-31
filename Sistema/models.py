@@ -8,9 +8,12 @@ class Usuario(models.Model):
     email = models.EmailField(max_length=30)##Optei por tipo emailfield mesmo, então usem no padrão de um email real(exemplo@teste.com.br)
 
     def __str__(self):
-        return f'Usuario {self.nome}'
+        return f'{self.nome}'
     class Meta:
         verbose_name_plural = "Usuarios"
+
+
+
 class Tarefa(models.Model):
     titulo = models.CharField(max_length=50)
     descricao = models.CharField(max_length=100)
@@ -23,6 +26,9 @@ class Tarefa(models.Model):
 
     class Meta:
         verbose_name_plural = "Tarefas"
+
+
+        
 class Categoria(models.Model):
     op1 = 'Manutenção'; op2 = 'Movimentação'
     op3 = 'Compra/Venda'; op4 = 'Desconhecido/Desaparecido'; op5 = 'Stand-by'

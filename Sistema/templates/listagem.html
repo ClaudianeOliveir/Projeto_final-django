@@ -1,0 +1,36 @@
+<!-- listagem.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Tarefas</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static "css/estilo.css" %}"/>
+</head>
+<body>
+    <h2>Listagem de Tarefas</h2>
+
+    <h3>Títulos:</h3>
+    <ul>
+        {% for tarefa in T_titulo %}
+            <li>{{ tarefa.titulo }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Descrições:</h3>
+    <ul>
+        {% for tarefa in T_decricao %}
+            <li>{{ tarefa.descricao }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Proprietários:</h3>
+    <ul>
+        {% for tarefa in T_proprietario %}
+            <li>{{ tarefa.proprietario }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/Home">Retornar</a>
+</body>
+</html>

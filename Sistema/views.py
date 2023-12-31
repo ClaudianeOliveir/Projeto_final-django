@@ -18,10 +18,17 @@ def Home(redirect):## Página inicial do projeto
         return HttpResponse("Template não encontrado.")
     ##return HttpResponse(template.render())
 
-def Listas_Criadas(request): ##Mostra as tarefas presentes no banco de dados
+def Listas_Criadas(request): ##GET para intermédio da template/view listagem
+    T_titulo = Tarefa.objects.values('titulo').distinct()
+    T_decricao = Tarefa.objects.values('descricao').distinct()
+    T_proprietario = Tarefa.objects.values('proprietario').distinct()
+    print('LISTAGEM INICIADA COM SUCESSO')
+    return render(request, 'listagem.html', {'T_titulo': T_titulo,'T_decricao': T_decricao,'T_proprietario': T_proprietario})
+
+###def Listagem(request): ## Aqui é onde aparecem as tarefas existentes no banco de dados
     Tarefas = Tarefa.objects.all()
-    print('REQUISIÇÃO PARA LISTAS CRIADAS ACEITA')
-    return render(request, 'listas_criadas.html', {'Tarefas': Tarefas})
+    print('LISTAGEM INICIADA COM SUCESSO')
+    return render(request, 'listagem.html', {'Tarefas': Tarefas})
 
 
 def Criar_Tarefas(redirect): ##Ao acessar o link, joga para o formulário
@@ -67,7 +74,7 @@ def Forms(request): ##Recebe valores POST do formulario e processa. Caso dê cer
     
 
 
-def Criar_Tarefas000(request): ## <---- Simulacro de view, ignorar!
+##def Criar_Tarefas000(request): ## <---- Simulacro de view, ignorar!
     if request.method == 'POST':
         form = Tarefa.Form(request.POST)
         try:
