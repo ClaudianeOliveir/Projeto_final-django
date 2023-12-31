@@ -2,14 +2,15 @@
   <head> 
   <meta charset="UTF-8"> 
     <title> Lista de tarefas </title>
-    {%load static%}
+    {%load static %}
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}"/>
   </head>
   <h1> Lista de Tarefas</h1>
   <body>
     <!-- menu --> 
     <nav>
-      <ul id="menu-h">
+      <i class="fa fa-bars" title="Click me!"></i>
+      <ul>
           <li>
             <a href="{% url 'Sistema:listas_criadas' %}">Listas Criadas</a>
           </li>
