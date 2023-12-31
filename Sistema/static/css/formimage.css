@@ -1,3 +1,54 @@
-body{background-color: beige;
+body{background-color: rgb(255, 255, 255);
     font: 400;
     text-align: justify;}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: blueviolet;
+    color: black;
+    font-family: Cambria, Arial;
+
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+form{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+form input, form textarea{
+    outline: unset;
+    padding: 20px;
+    min-width: 300px;
+    border: 1px solid cornflowerblue;
+    border-radius: 20px;
+}
+
+form input focus,form textarea focus {
+    background-color: wheat;
+}
+
+form input[type-submit] {
+    background-color: cornflowerblue;
+    color: wheat;
+    cursor: pointer;
+}
+
+form label{
+    margin-left: 10px;
+}
