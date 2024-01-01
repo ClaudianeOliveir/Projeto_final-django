@@ -1,0 +1,31 @@
+/* sucesso.css */
+
+body {
+    font-family: 'Arial Narrow', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #8A2BE2;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #8A2BE2;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #6B1A9E;
+}

@@ -1,0 +1,40 @@
+body {
+    font-family: 'Arial Narrow', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+h2 {
+    color: #8A2BE2;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para a mensagem quando não há tarefas */
+p {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilos para o link de retorno */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #8A2BE2;
+    border-radius: 5px;
+}
