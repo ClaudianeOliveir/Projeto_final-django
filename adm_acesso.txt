@@ -1,0 +1,2 @@
+user: Lojista
+password: Loja123

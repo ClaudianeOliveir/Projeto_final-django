@@ -25,7 +25,7 @@ def Listas_Criadas(request): ##GET para intermédio da template/view listagem
     print('LISTAGEM INICIADA COM SUCESSO')
     return render(request, 'listagem.html', {'T_titulo': T_titulo,'T_decricao': T_decricao,'T_proprietario': T_proprietario})
 
-###def Listagem(request): ## Aqui é onde aparecem as tarefas existentes no banco de dados
+###def Listagem(request): ## Aqui é onde aparecem as tarefas existentes no banco de dados///// NÃO ESTÁ EM USO
     Tarefas = Tarefa.objects.all()
     print('LISTAGEM INICIADA COM SUCESSO')
     return render(request, 'listagem.html', {'Tarefas': Tarefas})
@@ -43,12 +43,12 @@ def Forms(request): ##Recebe valores POST do formulario e processa. Caso dê cer
 
     if request.method == 'POST':
         print("REQUISIÇÃO ACEITA")
-        data_padrao_tupla = (2024, 10, 20)
+        data_padrao_tupla = (2024, 10, 20) ## Tupla para passar dados, falha no modelo
         titulo = request.POST.get('titulo')
         descricao = request.POST.get('descricao')
         proprietario = request.POST.get('proprietario')
         data_finalizacao = date(*data_padrao_tupla)
-        concluida = 1
+        concluida = 1 ## str para passar dados, falha no modelo
         try:
             proprietario = Usuario.objects.get(nome=proprietario)
         except Usuario.DoesNotExist:

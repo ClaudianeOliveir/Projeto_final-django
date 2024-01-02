@@ -1,0 +1,50 @@
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial Narrow', sans-serif;
+}
+
+/* Estilos para o cabeçalho (h1) */
+h1 {
+    background-color: #8A2BE2;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Estilos para o menu de navegação */
+nav {
+    background-color: #000;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Estilos para tornar o menu responsivo */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

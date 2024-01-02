@@ -1,0 +1,55 @@
+body, h2, form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial Narrow', sans-serif;
+    background: linear-gradient(45deg, BlueViolet, HotPink);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: inline-block;
+    background-color: #fff;
+    background-image: linear-gradient(45deg, BlueViolet, HotPink);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 400px; /* Ajuste para centralizar o formulário */
+    margin: 0 auto; /* Ajuste para centralizar o formulário */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border-radius: 8px; /* Estilo redondo para os campos de entrada */
+}
+
+button {
+    background-color: Indigo;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: BlueViolet;
+}
